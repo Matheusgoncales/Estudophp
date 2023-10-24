@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <title>Form-steps 15</title>
+</head>
+
+<body>
+   <form method="post" id="global">
+        <div class="boxprincipal">
+            <div class="boxleft">
+                <div class="step">
+                    <div class="number" id="um">1</div>
+                    <div class="infostep">
+                        <p class="name">Step1</p>
+                        <p class="namestep">YOUR INFO</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="number" id="dois">2</div>
+                    <div class="infostep">
+                        <p class="name">Step2</p>
+                        <p class="namestep">SELECT PLAN</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="number" id="tres">3</div>
+                    <div class="infostep">
+                        <p class="name">Step3</p>
+                        <p class="namestep">addons</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="number" id="quatro">4</div>
+                    <div class="infostep">
+                        <p class="name">Step4</p>
+                        <p class="namestep">SUMMARY</p>
+                    </div>
+                </div>
+            </div>
+            <div class="boxright">
+                <div class="boxstep1">
+                    <div class="header">
+                        <h1>Personal info</h1>
+                        <p class="info">Please provide your name, email address, and phone number</p>
+                    </div>
+                    <div class="inputbox">
+                        <div class="errordiv">
+                            <p class="nameinput">Name</p>
+                            <p class="errorname"></p>
+                        </div>
+                        <input class="input" type="text" name="name" id="name" placeholder="e.g.Stephen King" required>
+                    </div>
+                    <div class="inputbox">
+                        <div class="errordiv">
+                            <p class="email">Email Adress</p>
+                            <p class="erroremail"></p>
+                        </div>
+                        <input class="input" type="text" name="email" id="email" placeholder="e.g.stephenking@lorem.com"
+                            required>
+                    </div>
+                    <div class="inputbox">
+                        <div class="errordiv">
+                            <p class="phone">Phone Number</p>
+                            <p class="errorphone"></p>
+                        </div>
+                        <input class="input" type="text" name="phone" id="phone" placeholder="+1 234 567 890"
+                            required>
+                    </div>
+                    <div class="btnsline">
+                        <input class="button" type="button" value="Next Step" onclick="next1()">
+                    </div>
+                </div>
+                <div class="boxstep2">
+                    <div class="header">
+                        <h1>Select your plan</h1>
+                        <p class="info">You have the option of monthly or yearly billing.</p>
+                    </div>
+                    <div class="planos">
+                        <div class="arcade" id="arcadeid">
+                            <input class="plans" id="Arcade" type="radio" name="planbox" value="Arc-mo">
+                            <label for="Arcade">
+                                <div class="img"><img src="assets/images/icon-arcade.svg"></div>
+                                <div class="infostep2">
+                                    <p class="nameprogram">Arcade</p>
+                                    <p class="Price" id="price1">$<span class="Price" id="nmr1">9</span>/mo</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="arcade" id="advancedid">
+                            <input class="plans" id="Advanced" type="radio" name="planbox" value="Adv-mo">
+                            <label for="Advanced">
+                                <div class="img"><img src="assets/images/icon-advanced.svg"></div>
+                                <div class="infostep2">
+                                    <p class="nameprogram">Advanced</p>
+                                    <p class="Price" id="price2">$<span class="Price" id="nmr2">12</span>/mo</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="arcade" id="proid">
+                            <input class="plans" id="Pro" type="radio" name="planbox" value="Pro-mo">
+                            <label for="Pro">
+                                <div class="img"><img src="assets/images/icon-pro.svg"></div>
+                                <div class="infostep2">
+                                    <p class="nameprogram">Pro</p>
+                                    <p class="Price" id="price3">$<span class="Price" id="nmr3">15</span>/mo</p>
+                                </div>
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="rangebar">
+                        <p class="Monthly">Monthly</p>
+                        <input type="range" name="" id="range" value="0" max="1" step="1">
+                        <p class="Yearly">Yearly</p>
+                    </div>
+                    <div class="btnsline">
+                        <input class="goback" id="goback2" type="button" value="Go Back" onclick="back2()">
+                        <input class="button" type="button" value="Next Step" onclick="next2()">
+                    </div>
+                </div>
+                <div class="boxstep3">
+                    <div class="header">
+                        <h1>Pick addons</h1>
+                        <p class="info2">addons help enhance your gaming experience.</p>
+                    </div>
+                    <div class="checkboxidentity">
+                        <div class="checkbox">
+                            <div class="checkboxdiv">
+                                <input type="checkbox" class="check" name="addons" id="online" value="online-mo">
+                            </div>
+                            <div class="infocheck" id="onlinecl">
+                                <p class="ponline">Online service</p>
+                                <p class="pinfoonline">Acess to multiplayer games</p>
+                            </div>
+                            <div class="price" id="valueonline">+$1/mo</div>
+                        </div>
+
+                        <div class="checkbox">
+                            <div class="checkboxdiv">
+                                <input type="checkbox" class="check" name="addons" id="larger" value="larger-mo">
+                            </div>
+                            <div class="infocheck" id="largercl">
+                                <p class="ponline">Larger storage</p>
+                                <p class="pinfoonline">extra 1TB of cloud sabe</p>
+                            </div>
+                            <div class="price" id="valuelarger">+$2/mo</div>
+                        </div>
+                        <div class="checkbox">
+                            <div class="checkboxdiv">
+                                <input type="checkbox" class="check" name="addons" id="custumizable" value="custom-mo">
+                            </div>
+                            <div class="infocheck" id="custumizablecl">
+                                <p class="ponline">Customizable Profile</p>
+                                <p class="pinfoonline">Custom theme on your profile</p>
+                            </div>
+                            <div class="price" id="valuecustom">+$2/mo</div>
+                        </div>
+                    </div>
+                    <div class="btnsline">
+                        <input class="goback" id="goback3" type="button" value="Go Back" onclick="back3()">
+                        <input class="button" type="button" value="Next Step" id="submitbtn" onclick="next3()">
+                    </div>
+
+                </div>
+                <div class="boxstep4">
+                    <div class="header">
+                        <h1>Finishing up</h1>
+                        <p class="info">Double-check everything looks OK before confirming.</p>
+                    </div>
+
+                    <div class="boxmid">
+                        <div class="divinf">
+                            <div class="arcadebox">
+                                <div class="parcade">
+                                    <p class="arcade4">Arcade (Monthly)</p>
+                                    <p class="changep">Change</p>
+                                </div>
+                                <div class="boxprice">
+                                    <p class="price4">$<span id="arcademon">9</span>/mo</p>
+                                </div>
+                            </div>
+                            <div class="hr">
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="total">
+                        <div class="totalp">
+                            <p class="valuetotal">Total (per month)</p>
+                        </div>
+                        <div class="valuediv">
+                            <p class="totalvalue">+/mo</p>
+                        </div>
+                    </div>
+                    <div class="btnsline">
+                        <input class="button" type="submit" value="Confirm" id="Confirm" onclick="confirm()">
+                    </div>
+    </form>
+    </div>
+    <div class="boxstepfinal">
+        <div class="boxicon">
+            <img class="thankicon" src="assets/images/icon-thank-you.svg" alt="">
+            <p class="picon">Thank you!</p>
+        </div>
+        <div class="textthx">
+            <p class="pthankyou">
+                Thanks for confirming your subscription! We hope you have
+                fun using our platform. If you ever need support, please feel free
+                to email us at support@loremgaming.com.
+            </p>
+        </div>
+    </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
